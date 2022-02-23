@@ -17,6 +17,14 @@ public class PayBillsStepDefs {
     new Select(payBillsPage.Account_dropdown).selectByVisibleText(userInputs.get("Account"));
 
     payBillsPage.AmmountBox.sendKeys(userInputs.get("Amount"));
+    // Retrieve typed value
+    String typedValue =  payBillsPage.AmmountBox.getAttribute("value");
+    // Get the length of typed value
+    int size = typedValue.length();
+    if (size == 0) {
+      System.out.println("Only numbers are allowed.");
+    }
+
     payBillsPage.DateBox.sendKeys(userInputs.get("Date"));
     payBillsPage.DescriptionBox.sendKeys(userInputs.get("Description"));
 
