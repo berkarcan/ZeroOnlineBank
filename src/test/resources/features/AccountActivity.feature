@@ -1,3 +1,4 @@
+
 Feature: Navigating to specific accounts in Accounts Activity
 
   Background:
@@ -6,7 +7,14 @@ Feature: Navigating to specific accounts in Accounts Activity
     When the user clicks "Account Activity" on the main page
     Then the "Zero - Account Activity" title page should be displayed
 
-    Scenario Outline: : "<Accounts>" account redirect
+  Scenario:Transactions column names
+    And Transactions table should have column names
+      | Date        |
+      | Description |
+      | Deposit     |
+      | Withdrawal  |
+
+  Scenario Outline: "<Accounts>" account redirect
     When the user clicks on "<Accounts>" dropdown link on the Account Activity page
     Then Account dropdown should have "<Accounts>"  selected
     Examples:
@@ -16,4 +24,5 @@ Feature: Navigating to specific accounts in Accounts Activity
       | Checking    |
       | Credit Card |
       | Loan        |
+
 

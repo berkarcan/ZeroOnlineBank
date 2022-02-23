@@ -1,11 +1,9 @@
 package com.zerobank.stepdefinitions;
 
-import com.zerobank.pages.AccountSummaryPage;
+
 import com.zerobank.pages.LoginPage;
-import com.zerobank.utilities.BrowserUtils;
 import com.zerobank.utilities.ConfigurationReader;
 import com.zerobank.utilities.Driver;
-import io.cucumber.java.en.And;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import org.junit.Assert;
@@ -16,7 +14,6 @@ public class LoginStepDefs {
   LoginPage loginPage=new LoginPage();
   @Given("the user on the login page")
   public void the_user_on_the_login_page() {
-    Driver.get().get(ConfigurationReader.get("url"));
     loginPage.signInButton.click();
   }
 

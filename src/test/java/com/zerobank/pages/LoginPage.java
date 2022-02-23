@@ -17,8 +17,6 @@ public class LoginPage extends BasePage{
   @FindBy(xpath = "//input[@name='submit']")
   public WebElement submit_button;
 
-  public void login(){
 
-  }
 
 }
