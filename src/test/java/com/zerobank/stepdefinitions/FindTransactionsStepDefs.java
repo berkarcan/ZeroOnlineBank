@@ -8,6 +8,8 @@ import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
 import org.junit.Assert;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.support.ui.Select;
 
 import java.util.Collections;
 import java.util.List;
@@ -88,5 +90,39 @@ public class FindTransactionsStepDefs {
     for (String cell : Cells) {
       Assert.assertFalse(cell.contains(arg0));
     }
+  }
+
+  @When("user selects type {string}")
+  public void userSelectsType(String arg0) {
+    BrowserUtils.waitForVisibility(findTransactionsPAge.type_dropdown,5);
+    Select type_options=new Select(findTransactionsPAge.type_dropdown);
+    type_options.selectByVisibleText(arg0);
+
+  }
+
+  @Then("results table should show at least one result under {string}")
+  public void resultsTableShouldShowAtLeastOneResultUnder(String arg0) {
+    List<WebElement> type;
+    if (arg0.equals("Deposit")) {
+      type = findTransactionsPAge.DepositColumns;
+    } else {type = findTransactionsPAge.WithdrawalColumns;}
+
+    List<String> typeResults = BrowserUtils.getElementsText(type);
+    Assert.assertTrue("There aren't at least one under" + arg0, type.size() > 0);
+  }
+
+  @But("results table should show no result under {string}")
+  public void resultsTableShouldShowNoResultUnder(String otherType) {
+    List<WebElement> other_type;
+    if (otherType.equals("Deposit")) {
+      other_type = findTransactionsPAge.DepositColumns;
+    } else {other_type = findTransactionsPAge.WithdrawalColumns;}
+
+    List<String> typeResults = BrowserUtils.getElementsText(other_type);
+    for (String typeResult : typeResults) {
+      Assert.assertTrue("There are at least one result under" + otherType, typeResult.isEmpty());
+    }
+
+
   }
 }

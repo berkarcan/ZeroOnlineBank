@@ -1,5 +1,6 @@
-
+@wip
 Feature: Find Transactions in Account Activity
+
   Background:
     Given the user on the login page
     And User logins with username "username" and "password"
@@ -17,8 +18,8 @@ Feature: Find Transactions in Account Activity
     Then results table should only show transactions dates between "2012-09-02" to  "2012-09-06"
     And the results table should only not contain transactions dated "2012-09-01"
 
-  @wip
- Scenario: Search description
+
+  Scenario: Search description
     When the user enters description "ONLINE"
     And clicks Find
     Then results table should only show descriptions containing "ONLINE"
@@ -35,3 +36,16 @@ Feature: Find Transactions in Account Activity
     When the user enters description "online"
     And clicks Find
     Then results table should only show descriptions containing "ONLINE"
+
+  Scenario Outline: Type
+    When user selects type "<Type>"
+    And clicks Find
+    Then results table should show at least one result under "<Type>"
+    But results table should show no result under "<OtherType>"
+    Examples:
+      | Type       | OtherType  |
+      | Deposit    | Withdrawal |
+      | Withdrawal | Deposit    |
+
+
+

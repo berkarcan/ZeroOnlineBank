@@ -2,19 +2,15 @@ package com.zerobank.stepdefinitions;
 
 import com.zerobank.pages.AccountActivityPage;
 import com.zerobank.pages.BasePage;
-import com.zerobank.pages.FindTransactionsPAge;
 import com.zerobank.utilities.Driver;
-import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
-import io.cucumber.java.en_old.Ac;
 import org.junit.Assert;
 import org.openqa.selenium.By;
-import org.openqa.selenium.WebElement;
+
 import org.openqa.selenium.support.ui.Select;
 
-import static com.zerobank.utilities.BrowserUtils.waitFor;
-import static com.zerobank.utilities.BrowserUtils.waitForVisibility;
+
 
 public class AccountActivityStepDefs extends BasePage {
 
