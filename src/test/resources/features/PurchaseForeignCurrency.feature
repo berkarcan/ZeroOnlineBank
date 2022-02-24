@@ -30,5 +30,5 @@ Feature: Purchase Foreign Currency
     Then error message "Please, ensure that you have filled all the required fields with valid values." should be displayed
   @wip
   Scenario: Error message for not entering value
-    When user tries to calculate cost without entering a value
+    When user tries to calculate cost without entering a value and selecting "Japan (yen)" currency
     Then error message "Please, ensure that you have filled all the required fields with valid values." should be displayed
