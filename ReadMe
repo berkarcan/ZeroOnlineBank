@@ -1,0 +1,11 @@
+# Zero Online Bank Web App Functionality TestsProject
+
+[Pages](https://github.com/berkarcan/ZeroOnlineBank/new/master/src/test/java/com/zerobank/pages)
+<br>
+[Step Definitions](https://github.com/berkarcan/ZeroOnlineBank/new/master/src/test/java/com/zerobank/step_definitions)
+<br>
+[Features](https://github.com/berkarcan/ZeroOnlineBank/new/master/src/test/resources/features)
+<br>
+
+## Cucumber Report foto
+![Cucumber Reports](https://github.com/berkarcan/ZeroOnlineBank/new/master/src/CucumberReports.jpg)
