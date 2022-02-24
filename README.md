@@ -6,13 +6,13 @@ The only failing two test cases find that Currency amount box can accept alphabe
 <br>
 Feel free to collaborate.
 
-[Pages](https://github.com/berkarcan/ZeroOnlineBank/blob/master/src/test/java/com/zerobank/pages)
+[Pages:](https://github.com/berkarcan/ZeroOnlineBank/blob/master/src/test/java/com/zerobank/pages)
 <br>
-[Step Definitions](https://github.com/berkarcan/ZeroOnlineBank/tree/master/src/test/java/com/zerobank/stepdefinitions)
+[Step Definitions:](https://github.com/berkarcan/ZeroOnlineBank/tree/master/src/test/java/com/zerobank/stepdefinitions)
 <br>
-[Features](https://github.com/berkarcan/ZeroOnlineBank/tree/master/test/resources/features)
+[Features:](https://github.com/berkarcan/ZeroOnlineBank/tree/master/src/test/resources/features)
 <br>
 
 ## Cucumber Report foto
-![Cucumber Reports](https://github.com/berkarcan/ZeroOnlineBank/blob/master/src/cucumber_report.png)
+![Cucumber Report Screenshot](https://github.com/berkarcan/ZeroOnlineBank/blob/master/src/cucumber_report.png)
 
