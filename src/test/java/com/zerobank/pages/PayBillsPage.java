@@ -1,6 +1,6 @@
 package com.zerobank.pages;
 
-import org.apache.commons.compress.compressors.pack200.Pack200Utils;
+import java.util.regex.*;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 
@@ -27,6 +27,15 @@ public class PayBillsPage extends BasePage{
   @FindBy (xpath="//*[@type='submit']")
   public  WebElement PayButton;
 
+  public Boolean IsPositiveNumber(String input){
+    String regex = "^(?:[1-9]\\d*|0)?(?:\\.\\d+)?$";
+    return input.matches(regex);
+  }
+
+  public Boolean IsNonAlphabetic(String input){
+    String regex = "[^a-z]|[^A-Z]";
+    return !input.matches(regex);
+  }
 
 
 
