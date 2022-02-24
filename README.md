@@ -1,4 +1,6 @@
-# Zero Online Bank Web App Functionality TestsProject
+# Zero Online Bank Web App Functionality Tests Project
+This project accomplish the automated functionality test of http://zero.webappsecurity.com/. 
+Feel free to collaborate.
 
 [Pages](https://github.com/berkarcan/ZeroOnlineBank/blob/master/src/test/java/com/zerobank/pages)
 <br>
