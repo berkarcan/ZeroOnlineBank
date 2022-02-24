@@ -21,9 +21,8 @@ public class CurrencyStepDEfs {
    Select currencySelect=new Select(payBillsPage.currencyDropdown);
    
     List<String> actualCurrencies=BrowserUtils.getElementsText(currencySelect.getOptions());
-    actualCurrencies.remove(0);
     System.out.println("actualCurrencies = " + actualCurrencies);
-    Assert.assertEquals(expectedCurrencies,actualCurrencies);
+    Assert.assertTrue(actualCurrencies.containsAll(expectedCurrencies));
   }
 
    @When("user tries to calculate cost without selecting a currency")
