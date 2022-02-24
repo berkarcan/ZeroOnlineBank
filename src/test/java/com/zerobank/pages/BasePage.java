@@ -19,5 +19,15 @@ public abstract class BasePage {
 
   }
 
+  /* not used methods for further use incase of need
+  public Boolean IsPositiveNumber(String input){
+    String regex = "^(?:[1-9]\\d*|0)?(?:\\.\\d+)?$";
+    return input.matches(regex);
+  }
+  public Boolean IsNonAlphabetic(String input){
+    String regex = "[^a-z]|[^A-Z]";
+    return !input.matches(regex);
+  }
+  */
 
 }

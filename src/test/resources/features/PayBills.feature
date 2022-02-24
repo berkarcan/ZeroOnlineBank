@@ -1,4 +1,4 @@
-@wip
+
 Feature: Pay Bills menu
 
   Background:

@@ -27,19 +27,35 @@ public class PayBillsPage extends BasePage{
   @FindBy (xpath="//*[@type='submit']")
   public  WebElement PayButton;
 
-  public Boolean IsPositiveNumber(String input){
-    String regex = "^(?:[1-9]\\d*|0)?(?:\\.\\d+)?$";
-    return input.matches(regex);
-  }
+  @FindBy (linkText="Add New Payee")
+  public WebElement addNewPayeeTab;
+  @FindBy (id="np_new_payee_name")
+  public WebElement payeeNameBox;
+  @FindBy (id="np_new_payee_address")
+  public WebElement payeeAddressBox;
+  @FindBy(id="np_new_payee_account")
+  public WebElement payeeAccountBox;
+  @FindBy(id="np_new_payee_details")
+  public  WebElement payeeDetailsBox;
+  @FindBy(id="add_new_payee")
+  public WebElement addButton;
 
-  public Boolean IsNonAlphabetic(String input){
-    String regex = "[^a-z]|[^A-Z]";
-    return !input.matches(regex);
-  }
+  @FindBy (linkText = "Purchase Foreign Currency")
+  public  WebElement currencyTab;
+  @FindBy(id="pc_currency")
+  public WebElement currencyDropdown;
+  @FindBy(id="pc_amount")
+  public WebElement amountBox;
+  @FindBy(id="pc_inDollars_true")
+  public WebElement DollarsTrueCheckbox;
+  @FindBy(id="pc_inDollars_false")
+  public WebElement DollarsFalseCheckbox;
+  @FindBy (id="pc_calculate_costs")
+  public WebElement CalculateCostsButton;
+  @FindBy(id="purchase_cash")
+  public WebElement PurchaseCashButton;
 
-
-
-
-
+  @FindBy(id="alert_content")
+  public WebElement actualMessage;
 
 }
