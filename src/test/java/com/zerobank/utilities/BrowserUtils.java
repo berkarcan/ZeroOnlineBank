@@ -23,18 +23,6 @@ public class BrowserUtils {
     }
 
 
-    public static List<String> getElementsText(By locator) {
-
-        List<WebElement> elems = Driver.get().findElements(locator);
-        List<String> elemTexts = new ArrayList<>();
-
-        for (WebElement el : elems) {
-            elemTexts.add(el.getText());
-        }
-        return elemTexts;
-    }
-
-
     public static void waitFor(int seconds) {
         try {
             Thread.sleep(seconds * 1000);
@@ -48,11 +36,6 @@ public class BrowserUtils {
         return wait.until(ExpectedConditions.visibilityOf(element));
     }
 
-
-    public static WebElement waitForClickability(WebElement element, int timeout) {
-        WebDriverWait wait = new WebDriverWait(Driver.get(), timeout);
-        return wait.until(ExpectedConditions.elementToBeClickable(element));
-    }
 
     public static WebElement waitForClickability(By locator, int timeout) {
         WebDriverWait wait = new WebDriverWait(Driver.get(), timeout);
