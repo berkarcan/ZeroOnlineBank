@@ -2,6 +2,7 @@ package com.zerobank.stepdefinitions;
 
 
 import com.zerobank.pages.LoginPage;
+import com.zerobank.utilities.BrowserUtils;
 import com.zerobank.utilities.ConfigurationReader;
 import com.zerobank.utilities.Driver;
 import io.cucumber.java.en.Given;
@@ -23,6 +24,8 @@ public class LoginStepDefs {
     loginPage.loginBox.sendKeys(userName);
     loginPage.passwordBox.sendKeys(password);
     loginPage.submit_button.click();
+    Driver.get().navigate().to("http://zero.webappsecurity.com/bank/account-summary.html");
+    BrowserUtils.waitFor(2);
   }
   @Then("the {string} title page should be displayed")
   public void theTitlePageShouldBeDisplayed(String expectedTitle) {
