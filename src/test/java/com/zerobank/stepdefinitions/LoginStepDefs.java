@@ -25,7 +25,7 @@ public class LoginStepDefs {
     loginPage.passwordBox.sendKeys(password);
     loginPage.submit_button.click();
     Driver.get().navigate().to("http://zero.webappsecurity.com/bank/account-summary.html");
-    BrowserUtils.waitFor(2);
+    BrowserUtils.waitFor(1);
   }
   @Then("the {string} title page should be displayed")
   public void theTitlePageShouldBeDisplayed(String expectedTitle) {
