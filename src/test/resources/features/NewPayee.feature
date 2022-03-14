@@ -1,8 +1,7 @@
 Feature: Add new payee under pay bills
 
   Background:
-    Given the user on the login page
-    And User logins with username "username" and "password"
+    Given User logins with username "username" and "password"
     When the user clicks "Pay Bills" on the main page
     Given The user clicks "Add New Payee" tab under Pay Bills tab
 

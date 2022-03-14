@@ -2,8 +2,7 @@
 Feature: Navigating to specific accounts in Accounts Activity
 
   Background:
-    Given the user on the login page
-    And User logins with username "username" and "password"
+    Given User logins with username "username" and "password"
     When the user clicks "Account Activity" on the main page
     Then the "Zero - Account Activity" title page should be displayed
 

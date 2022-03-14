@@ -13,19 +13,13 @@ import java.util.List;
 
 public class LoginStepDefs {
   LoginPage loginPage=new LoginPage();
-  @Given("the user on the login page")
-  public void the_user_on_the_login_page() {
-    loginPage.signInButton.click();
-  }
-
 
   @Given("User logins with username {string} and {string}")
   public void user_logins_with_username_and(String userName, String password) {
-    loginPage.loginBox.sendKeys(userName);
-    loginPage.passwordBox.sendKeys(password);
-    loginPage.submit_button.click();
+    loginPage.login(userName,password);
     Driver.get().navigate().to("http://zero.webappsecurity.com/bank/account-summary.html");
     BrowserUtils.waitFor(1);
+
   }
   @Then("the {string} title page should be displayed")
   public void theTitlePageShouldBeDisplayed(String expectedTitle) {

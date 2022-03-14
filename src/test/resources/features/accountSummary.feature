@@ -1,8 +1,7 @@
 
 Feature: Account summary
   Background:
-    Given the user on the login page
-    And User logins with username "username" and "password"
+    Given  User logins with username "username" and "password"
     Then the "Zero - Account Summary" title page should be displayed
 
   Scenario: Account types and account columns

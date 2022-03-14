@@ -2,8 +2,7 @@
 Feature: Pay Bills menu
 
   Background:
-    Given the user on the login page
-    And User logins with username "username" and "password"
+    Given User logins with username "username" and "password"
     When the user clicks "Pay Bills" on the main page
     Then the "Zero - Pay Bills" title page should be displayed
 
